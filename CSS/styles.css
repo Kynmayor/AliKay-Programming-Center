@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #047aed;
+    --bg-color-dark: #0c2b4b;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -65px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+
+
+/* Navbar styling */
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+    cursor: pointer;
+}
+
+.navbar .container {
+    overflow: visible;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+
+/* Showcase */
+
+.header-text {
+    text-align: justify;
+}
+
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.showcase a {
+    color: #fff;
+}
+
+.showcase h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase h2 {
+    color: black;
+}
+
+.showcase .container {
+    overflow-y: visible;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 20px 0;
+}
+
+.showcase-form input[type='text'], 
+.showcase-form input[type='tel'], 
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 1rem;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+/* stats */
+.stats {
+    padding-top: 100px;
+}
+
+.main-heading {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.stats-text {
+    text-align: justify;
+}
+
+/* footer */
+
+.bg-footer {
+    border-top: 10px solid whitesmoke;
+    background: var(--bg-color-dark);
+    color: #fff;
+}
+
+.bg-footer .container {
+    height: 100%;
+}
+
+
+.skewness {
+    position: relative;
+    height: 50px;
+    background-color: var(--primary-color);
+}
+
+.skewness::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--primary-color);
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+
+}
+
+
+/* aboutUs styling */
+
+.features-head {
+    color: #fff;
+}
+
+strong {
+    color: yellow;
+}
+
+.freepik a {
+    color:#fff
+}
+
+.features-head .grid {
+    grid-template-columns: 1fr;
+    align-self: center;
+}
+
+.features-head .grid div {
+    text-align: center;
+}
+
+.about-us {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.available-languages {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.lang img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* display a scroll up text on the language card */
+
+.lang.card {
+    text-align: center;
+    border-top: none;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    box-shadow: -1px 3px 15px -1px rgba(0,0,0,0.75);
+    transition: transform 0.2s ease-in;
+}
+
+.card-text {
+    margin-top: 80px;
+    position: absolute;
+    bottom: 0px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 6px;
+    background-color: rgba(49, 68, 88, 0.4);
+    color: white;
+    transition: .5s;
+}
+
+.lang.card:hover .card-text {
+    height: 200px;
+    background-color: rgba(49, 68, 88, 0.9);
+}
+
+.lang.card:hover .lang-description {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.lang h4 {
+    margin-bottom: 15px;
+}
+
+.lang.card:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+}
+
+.languages.flex {
+    gap: 15px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+/* .card-text.reactJS {
+    bottom: -100px;
+} */
+
+.lang-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.lang-description {
+    text-align: justify;
+    visibility: hidden;
+    opacity: 0;
+}
+
+    
+/* Curriculum styling */
+
+.curriculum {
+    height: 200px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.curriculum .grid {
+    grid-template-columns: 1fr;
+    align-self: center;
+}
+
+.curriculum-text {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #e5e9ee;
+}
+
+.curriculum-text {
+    text-align: center;
+}
+
+.curriculum-content.grid {
+    grid-template-columns: 1fr 15fr;
+    /* border-bottom: 2px solid #b3b0b0; */
+    gap: 20px;
+    row-gap: 140px;
+}
+
+.border-line {
+    border-bottom: 2px solid #b3b0b0;
+}
+
+.message-text {
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes popAndColorChange {
+    0% {
+        transform: scale(1);
+        color: #fff; 
+    }
+    25% {
+        transform: scale(.9);
+        color: yellow;
+    }
+    50% {
+        transform: scale(.8);
+        color: orange;
+    }
+    75% { 
+        transform: scale(.9);
+        color: yellow;
+    }
+    100% { 
+        transform: scale(1);
+        color: #fff;
+    }
+}
+
+
+.pop-element {
+    animation: popAndColorChange 20s ease infinite; /* Apply the "pop" animation over 2 seconds infinitely. */
+}
+
+
+@keyframes formAlert {
+    0% {
+        /* transform: scale(1); */
+        color: black; 
+    }
+
+    25% {
+        color: blue; 
+    }
+    
+    50% {
+        color: orange;
+    }
+
+    75% {
+        color: green;
+    }
+
+    100% {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+.alert {
+    animation: formAlert 2s ease infinite;
+}
+
+
+/* Keyframe on the feature page */
+
+@keyframes ImagePop {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(.92);
+    }
+    
+    100% { 
+        transform: scale(1);
+    }
+}
+
+.image-area {
+    animation: ImagePop 10s ease infinite;
+}
+
+
+/* Tablets and under */
+@media(max-width: 768px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+        width: 350px;
+        height: 350px;
+    }
+
+    .flex .card {
+        z-index: 100;
+        width: 250px;
+        height: 300px;
+    }
+
+    .bg-footer {
+        font-size: .7rem;
+    }
+
+    .lang img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .curriculum-content.grid {
+        grid-template-columns: 1fr 5fr;
+        gap: 20px;
+    }
+
+    .card-text {
+        width: 250px;
+        height: 50px;
+    }
+
+}
+
+
+/* Mobile */
+@media(max-width: 500px) {
+
+    .navbar {
+        height: 130px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        /* margin-top: 10px; */
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .showcase-form {
+        width: 300px;
+        height: 350px;
+        padding-bottom: 10px;
+
+    }
+
+    .container .flex {
+        flex-direction: column;
+    }
+}
